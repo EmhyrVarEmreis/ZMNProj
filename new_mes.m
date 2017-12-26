@@ -3,7 +3,7 @@ clear;
 clc;
 
 dim = [ 10.00 10.00 ]; % board size [x y]
-net_step = [ 0.5 0.25 ]*2; % net steps => [normal accurate]
+net_step = [ 0.5 0.25 ]; % net steps => [normal accurate]
 E = [ 0.50 0.75 ]; % eps => [eps1 eps2]
 V = [ 0.50 0.75 ]; % V => [V1 V2]
 
