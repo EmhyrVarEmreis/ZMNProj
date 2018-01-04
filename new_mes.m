@@ -70,3 +70,12 @@ for i = 1:1:z
     end
 end
 s_tri = s_tri(1:t, :); % triangles inside shield walls/borders
+
+% initializing H matrix
+H = zeros(m);
+for i = 1:1:z
+    t = TRI(i,:);
+    p = [ W(t(1), :); W(t(2), :); W(t(3), :) ];
+    he = getHe(p, E(1));
+    H(TRI(i, 1:3), TRI(i, 1:3)) = H(TRI(i, 1:3), TRI(i, 1:3)) + he;
+end
